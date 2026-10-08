@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="api-base" content="">
+<title>Book | পাটিপত্র Patipatra</title>
+<meta name="description" content="Choose the Bengali wedding craft you would like - kalka, kulo, biyer piri, totto, mehendi and more - and confirm your booking with Patipatra.">
+<link rel="icon" href="/assets/patipatra-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main class="wrap" id="main">
+  <section class="page-head">
+    <p class="sc eyebrow">Book your craft</p>
+    <h1 class="bn">আপনার পছন্দ বেছে নিন</h1>
+    <p class="sc">Choose what you would like</p>
+    <p class="lead">Tap every item you need - you can select as many as you like. When you confirm, you will speak to us directly so we can listen to exactly what you have in mind.</p>
+  </section>
+
+  <div class="chips" id="chips" role="group" aria-label="Filter by type"></div>
+  <p class="err" id="load-error" role="alert"></p>
+  <div class="grid" id="grid" aria-busy="true"></div>
+</main>
+
+<div class="sticky-bar" id="bar" hidden>
+  <div class="wrap in">
+    <div>
+      <div class="count" id="bar-count"></div>
+      <div class="names" id="bar-names"></div>
+    </div>
+    <div class="actions">
+      <button type="button" class="btn small link" id="bar-clear">Clear</button>
+      <button type="button" class="btn gold" id="bar-confirm">Confirm booking</button>
+    </div>
+  </div>
+</div>
+
+<dialog class="dlg" id="dlg" aria-labelledby="dlg-title">
+  <form id="form" novalidate>
+    <div class="head">
+      <h2 class="bn" id="dlg-title">বুকিং নিশ্চিত করুন</h2>
+      <span class="sc">Confirm your booking</span>
+      <button type="button" class="x" id="dlg-close" aria-label="Close"></button>
+    </div>
+    <div class="body">
+      <div>
+        <div class="sc" style="margin-bottom:.4rem">You selected</div>
+        <div class="summary" id="summary"></div>
+      </div>
+      <div class="note-box" id="advance-note"></div>
+      <div class="fields">
+        <label class="field" id="f-name">Your name
+          <input name="name" autocomplete="name" maxlength="80" required>
+        </label>
+        <label class="field" id="f-phone">Mobile number
+          <input name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="18" placeholder="98XXXXXXXX" required>
+        </label>
+        <div class="two">
+          <label class="field" id="f-event_date">Event date <span class="opt">(optional)</span>
+            <input name="event_date" type="date">
+          </label>
+          <label class="field" id="f-city">City / area <span class="opt">(optional)</span>
+            <input name="city" autocomplete="address-level2" maxlength="80">
+          </label>
+        </div>
+        <label class="field" id="f-email">Email <span class="opt">(optional)</span>
+          <input name="email" type="email" autocomplete="email" maxlength="120">
+        </label>
+        <label class="field" id="f-message"><span id="msg-label">Anything you would like us to know <span class="opt">(optional)</span></span>
+          <textarea name="message" maxlength="1500" placeholder="Colours, theme, size, number of pieces, the story you want told..."></textarea>
+        </label>
+        <div class="hp" aria-hidden="true"><label>Website <input name="website" tabindex="-1" autocomplete="off"></label></div>
+      </div>
+      <p class="err" id="form-error" role="alert"></p>
+      <button type="submit" class="btn primary block" id="submit">Confirm booking</button>
+    </div>
+  </form>
+
+  <div id="done" hidden></div>
+</dialog>
+
+<script type="module" src="/assets/booking.js"></script>
+</body>
+</html>

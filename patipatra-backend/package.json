@@ -1,0 +1,16 @@
+{
+  "name": "patipatra-backend",
+  "version": "1.0.0",
+  "description": "Backend for Patipatra (পাটিপত্র): multi-service booking, admin notifications, gallery and reviews. Zero npm dependencies.",
+  "private": true,
+  "type": "module",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test"
+  }
+}

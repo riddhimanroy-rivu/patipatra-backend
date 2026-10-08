@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="api-base" content="">
+<title>Gallery | পাটিপত্র Patipatra</title>
+<meta name="description" content="Photos and videos of Patipatra's handmade Bengali wedding craft.">
+<link rel="icon" href="/assets/patipatra-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<main class="wrap" id="main">
+  <section class="page-head">
+    <p class="sc eyebrow">Our work</p>
+    <h1 class="bn">আমাদের কাজের গ্যালারি</h1>
+    <p class="sc">Photos &amp; videos</p>
+  </section>
+  <div class="chips" id="kinds" role="group" aria-label="Filter gallery"></div>
+  <p class="err" id="load-error" role="alert"></p>
+  <div class="gal" id="gal" aria-busy="true"></div>
+  <div class="empty" id="empty" hidden>
+    <p class="bn" style="font-size:1.3rem;margin:0">শীঘ্রই আরও ছবি আসছে</p>
+    <p style="margin:.3rem 0 0">New photos and videos are coming soon.</p>
+  </div>
+
+  <section id="reviews-section" hidden style="margin-top:4rem">
+    <p class="sc eyebrow">Kind words</p>
+    <h2 class="bn" style="font-weight:500;color:var(--red);font-size:2rem;margin:.3rem 0">গ্রাহকদের মতামত</h2>
+    <p id="rev-summary" class="sc" style="color:var(--muted)"></p>
+    <div class="rev-grid" id="revs"></div>
+  </section>
+  <p style="margin-top:3rem;text-align:center"><a class="btn primary" href="/booking">Book your craft</a></p>
+</main>
+
+<dialog class="lightbox" id="lb" aria-label="Gallery viewer">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Close"></button>
+  <button type="button" class="nav-btn prev" id="lb-prev" aria-label="Previous"></button>
+  <div class="stage" id="lb-stage"></div>
+  <button type="button" class="nav-btn next" id="lb-next" aria-label="Next"></button>
+  <div class="lb-cap" id="lb-cap"></div>
+</dialog>
+<script type="module" src="/assets/gallery.js"></script>
+</body>
+</html>

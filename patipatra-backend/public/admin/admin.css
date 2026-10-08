@@ -1,0 +1,46 @@
+body.admin { background: #f3efe6; }
+.a-top { background: var(--red); color: #fff; position: sticky; top: 0; z-index: 30; }
+.a-top .in { display: flex; align-items: center; justify-content: space-between; gap: .8rem; padding: .6rem 0; flex-wrap: wrap; }
+.a-top h1 { margin: 0; font-size: 1.15rem; font-weight: 600; display: flex; align-items: center; gap: .6rem; }
+.a-top .btn { color: #fff; border-color: rgba(255,255,255,.55); }
+.a-top .btn:hover { background: #fff; color: var(--red); }
+.a-top .btn.on { background: var(--marigold); border-color: var(--marigold); color: var(--ink); }
+.a-tabs { display: flex; gap: .3rem; overflow-x: auto; padding: .8rem 0 0; border-bottom: 1px solid var(--line); margin-bottom: 1.2rem; }
+.a-tabs button { border: 0; background: transparent; padding: .7rem 1.1rem; font-weight: 600; border-bottom: 3px solid transparent; white-space: nowrap; color: var(--muted); }
+.a-tabs button[aria-selected="true"] { color: var(--red); border-bottom-color: var(--red); }
+.a-tabs .count { background: var(--red); color: #fff; border-radius: 999px; font-size: .7rem; padding: .05rem .5rem; margin-left: .35rem; }
+.a-bar { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+.a-bar input, .a-bar select { border: 1.5px solid var(--line); border-radius: 10px; padding: .55rem .8rem; background: #fff; min-height: 42px; }
+.tbl-wrap { overflow-x: auto; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+table.tbl { width: 100%; border-collapse: collapse; font-size: .88rem; min-width: 720px; }
+.tbl th { text-align: left; padding: .7rem .9rem; background: var(--paper); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.tbl td { padding: .75rem .9rem; border-top: 1px solid var(--line); vertical-align: top; }
+.tbl tr.is-new td { background: #fff8ee; }
+.linkbtn { border: 0; background: none; padding: 0; color: var(--red); font-weight: 700; text-decoration: underline; text-align: left; }
+.badge { display: inline-block; padding: .15rem .65rem; border-radius: 999px; font-size: .72rem; font-weight: 700; background: #e7e0d2; color: var(--ink); white-space: nowrap; }
+.badge[data-s="new"] { background: var(--red); color: #fff; }
+.badge[data-s="contacted"] { background: #dbe8f7; color: #1b4a7a; }
+.badge[data-s="confirmed"], .badge[data-s="approved"] { background: #d9efe2; color: #14633c; }
+.badge[data-s="advance_received"] { background: #bfe5cf; color: #0c4d2c; }
+.badge[data-s="in_progress"], .badge[data-s="pending"] { background: #fdeac0; color: #6b4700; }
+.badge[data-s="delivered"], .badge[data-s="completed"] { background: var(--green); color: #fff; }
+.badge[data-s="cancelled"], .badge[data-s="hidden"] { background: #ddd; color: #555; }
+.muted { color: var(--muted); }
+.small { font-size: .8rem; }
+.a-list { display: grid; gap: 1rem; }
+.a-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem; display: grid; gap: .8rem; }
+.a-card .row { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+.a-card .cols { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.a-card .field input, .a-card .field textarea, .a-card .field select { min-height: 40px; padding: .5rem .7rem; }
+.a-card .thumb { width: 120px; height: 90px; border-radius: 10px; object-fit: cover; background: var(--paper); }
+.a-thumb-row { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.kv { display: grid; grid-template-columns: 8.5rem 1fr; gap: .3rem .8rem; font-size: .9rem; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; word-break: break-word; }
+.login { max-width: 380px; margin: 14vh auto 0; }
+.pre { white-space: pre-wrap; background: var(--paper); border-radius: 10px; padding: .7rem .9rem; font-size: .9rem; }
+.nlist { display: grid; gap: .6rem; }
+.nitem { border: 1px solid var(--line); border-radius: 10px; padding: .7rem .9rem; background: #fff; }
+.nitem.unread { border-color: var(--red); background: #fff8ee; }
+.nitem pre { margin: .3rem 0 0; white-space: pre-wrap; font: inherit; font-size: .84rem; color: var(--muted); }
+dialog.dlg.wide { width: min(720px, 100% - 1.5rem); }
